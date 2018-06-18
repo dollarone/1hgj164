@@ -34,11 +34,12 @@ export default class Player extends Phaser.GameObjects.Sprite {
             enter: keys.enter.isDown 
         }
         if (this.step%5==0) {
-            this.setFrame(0);
+            //this.setFrame(0);
             this.attack=false;
         }
         if (input.enter) {
-            this.setFrame(1);
+            //this.setFrame(1);
+            this.anims.play('attack', false);
             this.attack=true;
         }
 

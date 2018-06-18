@@ -13,6 +13,11 @@ class GameScene extends Phaser.Scene {
 
     create() {
 
+        this.anims.create({
+            key: 'attack',
+            frames: [ { key: 'zelda', frame: 1 }, { key: 'zelda', frame: 0 }],
+            frameRate: 10
+        });
         // This group contains all enemies for collision and calling update-methods
         this.enemyGroup = this.add.group();
 
